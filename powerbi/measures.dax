@@ -1,0 +1,22 @@
+// Paste into a Power BI model
+Total Sales = SUM(fact_sales[sales])
+
+Sales MA7 = 
+VAR CurrDate = MAX(dim_date[date_id])
+RETURN
+AVERAGEX(
+    DATESINPERIOD(dim_date[date_id], CurrDate, -7, DAY),
+    [Total Sales]
+)
+
+Avg Daily Demand = AVERAGE(forecast[forecast])
+
+Safety Stock =
+VAR Z = 1.65
+VAR StdDaily = AVERAGE(forecast[std_daily])
+RETURN IF(ISBLANK(StdDaily), BLANK(), Z * StdDaily)
+
+Reorder Level =
+VAR LeadTimeDays = 7
+VAR AvgDaily = [Avg Daily Demand]
+RETURN AvgDaily * LeadTimeDays + [Safety Stock]

@@ -1,0 +1,13 @@
+paths:
+  raw_data: data/raw/train.csv
+  test_data: data/raw/test.csv
+  processed_data: data/processed/processed.parquet
+  features_data: data/processed/features.parquet
+  model_dir: artifacts
+  model_file: artifacts/model_xgb.pkl
+  forecast_file: artifacts/forecast.csv
+
+forecast_horizon_days: 90
+top_n_series: 100  # limit training to top-N (store,item) series by total sales; set to 0 for ALL
+
+random_state: 42

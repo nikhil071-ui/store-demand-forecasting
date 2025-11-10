@@ -1,0 +1,16 @@
+# Virtual Environment
+.venv/
+venv/
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+
+# NOTE: We are NOT ignoring the raw data for this project
+# because the app pipeline depends on it.
