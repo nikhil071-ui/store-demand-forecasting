@@ -18,7 +18,7 @@ The pipeline ingests historical data, trains a time-series machine learning mode
     * [🚚 Replenishment & POs](#-replenishment--pos)
     * [📊 Supplier Performance (OTIF)](#-supplier-performance-otif)
     * [🌐 Global Trends (ABC-XYZ)](#-global-trends-abc-xyz)
-* [CSV Upload: File Format Requirements](#-csv-upload-file-format-requirements).
+* [CSV Upload: File Format Requirements](#-csv-upload-file-format-requirements)
 * [Additional Components](#-additional-components)
 
 ## ✨ Core Features
